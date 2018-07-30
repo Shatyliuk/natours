@@ -1,0 +1,56 @@
+.btn
+    border-radius: 2rem
+    padding: 1rem 2.5rem
+    text-transform: uppercase
+    transition: .3s
+    position: relative
+    border: none
+    cursor: pointer
+    &--white
+        background-color: #fff
+        color: $grey
+        &:after
+            background-color: #fff
+    &--green
+        display: inline-block
+        background: linear-gradient(to right top, $lightGreenRgba, $darkGreenRgba)
+        color: #fff
+    &--moveInTop
+        animation: moveInBottom 1s ease-out 1.1s
+        animation-fill-mode: backwards
+    &:after
+        content: ''
+        display: inline-block
+        height: 100%
+        width: 100%
+        border-radius: 2rem
+        position: absolute
+        z-index: -1
+        left: 0
+        top: 0
+        transition: .3s
+    &:hover
+        transform: translateY(-5px)
+        box-shadow: $boxShadow
+        &:after
+            transform: scale(1.4, 1.6)
+            opacity: 0
+    &:active
+        transform: translateY(0)
+        box-shadow: none
+.btn-more
+    color: $lightGreen
+    border-bottom: 1px solid $lightGreen
+    padding: 3px
+    transition: .3s
+    &:hover
+        background-color: $lightGreen
+        color: #fff
+        transform: translateY(-3px)
+        box-shadow: $boxShadow
+        &:after
+            transform: scale(1.4, 1.6)
+            opacity: 0
+    &:active
+        transform: translateY(0)
+        box-shadow: none

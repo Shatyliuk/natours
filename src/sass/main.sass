@@ -1,0 +1,75 @@
+@import 'variables'
+@import "components/mixins"
+
+html
+  line-height: 1.7
+  font-size: 16px
+  +response(big-desktop)
+    font-size: 20px
+  +response(tab-land)
+    font-size: 14px
+  +response(tab-port)
+      font-size: 12px
+
+body
+  font-family: $mainFont
+  font-weight: 400
+  color: #777
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+
+ul, li
+  margin: 0
+  padding: 0
+  list-style-type: none
+
+p
+  margin: 0
+
+a
+  text-decoration: none
+  color: black
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video
+  vertical-align: middle
+  max-width: 100%
+
+textarea
+  resize: none
+
+input,
+select,
+button
+  outline: none
+
+*, *:before, *:after
+  box-sizing: border-box
+.wrapper
+  margin: 0 auto
+.container
+  position: relative
+  max-width: 72em
+  margin: 0 auto
+  +response(tab-port)
+    max-width: 65em
+  +response(phone)
+    max-width: 40em
+//header
+@import 'modules/header'
+
+// footer
+@import 'modules/footer'
+
+//components
+@import "components/components"
+
+// pages
+// index
+@import 'pages/index'
+

@@ -1,0 +1,102 @@
+.navigation
+    &__checkbox
+        display: none
+    &__button
+        background-color: #fff
+        height: 4rem
+        width: 4rem
+        border-radius: 50%
+        position: fixed
+        top: 1rem
+        right: 1rem 
+        z-index: 12
+        box-shadow: $boxShadow
+        &:hover
+            cursor: pointer
+    &__background
+        height: 3rem
+        width: 3rem
+        border-radius: 50%
+        position: fixed
+        top: 1.5rem
+        right: 1.5rem
+        background: radial-gradient($lightGreen, $darkGreen)  
+        z-index: 10
+        transition: .7s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+    &__nav
+        height: 100vh
+        width: 100%
+        position: fixed
+        top: 0
+        right: 0
+        z-index: 11
+        transform: translateX(-100%)
+        opacity: 0
+        transition: .8s cubic-bezier(.49,.48,0,1.31)
+    &__list
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        text-align: center
+    &__item
+    &__link
+        display: inline-block
+        font-weight: 300
+        font-size: 2.5rem
+        padding: 1rem 1.5rem
+        color: #fff
+        text-transform: uppercase
+        background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%)
+        background-size: 230%
+        transition: .4s
+        +response(phone)
+            font-size: 1.8rem
+            background-size: 240%
+            padding: 1rem .5rem
+        &:hover
+            background-position: 100%
+            color: $grey
+            transform: translateX(1rem)
+    &__icon
+        top: 50%
+        &,
+        &:before,
+        &:after
+            width: 2rem
+            height: 3px
+            background-color: #333
+            display: block
+            position: absolute
+            left: 50%
+            transform: translate(-50%, -50%)
+        &:before,
+        &:after
+            content: ''
+            transition: .4s cubic-bezier(0.785, 0.135, 0.15, 0.86)
+        &:before
+            top: -5px
+        &:after
+            top: 8px
+        
+        
+    &__button:hover &__icon::before
+        top: -8px
+    &__button:hover &__icon::after
+        top: 11px
+    &__checkbox:checked + &__button &__icon
+        background-color: transparent
+    &__checkbox:checked + &__button &__icon:before
+        top: 0
+        left: 0
+        transform: rotate(135deg)
+    &__checkbox:checked + &__button &__icon:after
+        top: 0
+        left: 0
+        transform: rotate(-135deg)
+    &__checkbox:checked ~ &__background
+        transform: scale(200)
+    &__checkbox:checked ~ &__nav
+        transform: translateX(0)
+        opacity: 1
+

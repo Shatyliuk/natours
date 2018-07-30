@@ -1,0 +1,61 @@
+.form
+    &__group
+        display: flex
+        flex-direction: column
+        position: relative
+        &:not(:last-child)
+            margin-bottom: 3rem
+        &-row
+            flex-direction: row
+            justify-content: space-between
+    &__input
+        padding: .8rem 1.2rem
+        border-bottom: 3px solid transparent
+        border: none
+        background-color: rgba(255, 255, 255, .5)
+        transition: .3s
+        &:focus
+            box-shadow: $boxShadow
+            border-bottom: 3px solid $lightGreen
+            transform: translateY(-3px)
+        &:focus:invalid
+            border-bottom: 3px solid $darkOrange
+    &__input:placeholder-shown + &__label
+        opacity: 0
+        visibility: hidden
+        top: .5rem
+    &__label
+        transition: .3s
+        position: absolute
+        top: -2rem
+        left: 1.2rem
+    &__radio-group
+        position: relative
+    &__radio-label
+        padding-left: 2.5rem
+        cursor: pointer
+    &__radio-button
+        display: flex
+        width: 2rem
+        height: 2rem
+        border: .4rem solid $darkGreen
+        border-radius: 50%
+        position: absolute
+        left: 0
+        top: 0
+        &:after
+            content: ''
+            width: .8rem
+            height: .8rem
+            background-color: $darkGreen
+            border-radius: 50%
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            opacity: 0
+            transition: .3s
+    &__radio-input
+        display: none
+    &__radio-input:checked + &__radio-label &__radio-button:after
+        opacity: 1

@@ -1,0 +1,91 @@
+.section-about
+    padding: 15rem 0
+    margin-top: -17vh
+    background-color: $lightGrey
+    line-height: 2rem
+    +response(phone)
+        text-align: center
+    &__button
+        +response(phone)
+            margin-bottom: 2rem
+.heading-section
+    display: flex
+    justify-content: center
+    text-align: center
+    &__heading
+        font-size: 2rem
+        text-transform: uppercase
+        font-weight: 700
+        background: linear-gradient(to right, $lightGreen, $darkGreen)
+        -webkit-background-clip: text
+        -webkit-text-fill-color: transparent
+        transition: .3s
+        +response(phone)
+            font-size: 2.5rem
+        &:hover
+            transform: skewX(15deg) skewY(2deg) scale(1.1)
+            text-shadow: $boxShadow
+    &--left
+        justify-content: flex-start
+.heading-secondary
+    display: flex
+    flex-direction: column
+    &__heading
+        font-size: 1rem
+        text-transform: uppercase
+        font-weight: 900
+        +response(tab-port)
+            font-size: 1.5rem
+    &--columns
+        display: flex
+    &__text
+        &:not(:last-child)
+            margin-right: 2rem
+    &:not(:last-child)
+        margin-bottom: 2rem
+.section-features
+    padding: 15rem 0
+    background: linear-gradient(to right bottom, $lightGreenRgba, $darkGreenRgba), url('../images/nat-4.jpg') top
+    background-size: cover
+    transform: skewY(-7deg)
+    margin-top: -6rem
+.section-tours
+    padding: 15rem 0 10rem 0
+    background: $lightGrey
+    margin-top: -6rem
+    &__button
+        text-align: center
+.section-stories
+    padding: 10rem 0 5rem
+    position: relative
+    &__button
+        text-align: center
+.bg-video
+    position: absolute
+    height: 100%
+    width: 100%
+    top: 0
+    left: 0
+    z-index: -1
+    opacity: .2
+    &__content
+        height: 100%
+        width: 100%
+        object-fit: cover
+.section-book
+    padding: 10rem 1rem
+    background: linear-gradient(to right bottom, $lightGreenRgba, $darkGreenRgba)
+.book
+    padding: 3rem
+    background-image: linear-gradient(110deg, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, .9) 50%, transparent 50%), url('../images/nat-10.jpg')
+    background-size: cover
+    border-radius: 5px
+    box-shadow: $boxShadow
+    +response(tab-port)
+        background-image: linear-gradient(110deg, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, .9) 60%, transparent 60%), url('../images/nat-10.jpg')
+    +response(phone)
+        background-image: linear-gradient(110deg, rgba(255, 255, 255, .9) 0%, rgba(255, 255, 255, .9) 100%, transparent 50%), url('../images/nat-10.jpg')
+    &__form
+        display: flex
+        +response(phone)
+            justify-content: center

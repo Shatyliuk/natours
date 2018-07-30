@@ -1,0 +1,60 @@
+extends /layout/main
+block variables
+    - var title = 'Natours'
+block content
+    main
+        section.section-about
+            .container
+                .heading-section.mb-big
+                    h2.heading-section__heading Exiciting tours for adventurous people
+                .section-wrapper
+                    .section-about__text-content
+                        .heading-secondary
+                            h3.heading-secondary__heading.mb-small You're going to fall in love with nature
+                            p.heading-secondary__text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem facere fuga nesciunt dolorem magnam impedit beatae laudantium dolore? Possimus fugit officia omnis ipsa ullam autem dolorem assumenda alias! Placeat, sed.
+                        .heading-secondary
+                            h3.heading-secondary__heading.mb-small You're going to fall in love with nature
+                            p.heading-secondary__text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem facere fuga nesciunt dolorem magnam impedit beatae laudantium dolore? Possimus fugit officia omnis ipsa ullam autem dolorem assumenda alias! Placeat, sed.
+                        .heading-secondary
+                            h3.heading-secondary__heading.mb-small You're going to fall in love with nature
+                            p.heading-secondary__text Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem facere fuga nesciunt dolorem magnam impedit beatae laudantium dolore? Possimus fugit officia omnis ipsa ullam autem dolorem assumenda alias! Placeat, sed.
+                        .section-about__button
+                            a(href='#').btn-more Learn more &rarr;
+                    .section-about__image-content
+                        .composition
+                            img(src="images/nat-1-large.jpg", alt="nat-1").composition__img.composition__img--one
+                            img(src="images/nat-2-large.jpg", alt="nat-2").composition__img.composition__img--two
+                            img(src="images/nat-3-large.jpg", alt="nat-3").composition__img.composition__img--three
+        section.section-features
+            .container
+                .section-wrapper
+                    .feature__wrapper
+                        include ../pug/components/feature.pug
+        section.section-tours
+            .container
+                .heading-section.mb-big
+                    h2.heading-section__heading Most popular tours
+                .section-wrapper.section-wrapper--column
+                    include ../pug/components/tour.pug
+                    .section-tours__button
+                        a(href='#').btn.btn--green Discover our tours
+        section.section-stories
+            .bg-video
+                video(autoplay muted loop).bg-video__content
+                    source(src="images/video.mp4" type="video/mp4")
+                    source(src="images/video.webm" type="video/webm")
+            .container
+                .heading-section.mb-big
+                    h2.heading-section__heading We make people genuinely happy
+                .section-wrapper.section-wrapper--column.mb-big
+                    include ../pug/components/story.pug
+                .section-stories__button
+                        a(href='#').btn-more Read all stories &rarr;
+        section.section-book
+            .container
+                .book
+                    .book__form
+                        include ../pug/components/form.pug
+                        
+                        
+    

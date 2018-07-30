@@ -1,0 +1,22 @@
+form(action="#").form
+    .heading-section.heading-section--form.mb-medium
+        h4.heading-section__heading Start booking now
+    .form__group
+        input(id='name' type="text" placeholder="Full Name" name="name" required).form__input
+        label(for="name").form__label Full Name:
+    .form__group
+        input(id='email' type="email" placeholder="Email address" name="email" required).form__input
+        label(for="name").form__label Email address:
+    .form__group.form__group-row
+        .form__radio-group
+            input(type="radio" id='small' name='size').form__radio-input
+            label(for='small').form__radio-label 
+                span.form__radio-button
+                | Small tour group
+        .form__radio-group
+            input(type="radio" id='large' name='size').form__radio-input
+            label(for='large').form__radio-label 
+                span.form__radio-button
+                | Large tour group
+    .form__group
+        button.btn.btn--green Next step &rarr;

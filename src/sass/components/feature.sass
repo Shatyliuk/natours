@@ -1,0 +1,38 @@
+.feature
+    background-color: rgba(255, 255, 255, .8)
+    padding: 1.5rem
+    text-align: center
+    border-radius: 5px
+    box-shadow: $boxShadow
+    transition: .3s
+    &__icon
+        &-gradient
+            font-size: 3rem
+            background: linear-gradient(to right, $lightGreen, $darkGreen)
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+    &:not(:last-child)
+        margin-right: 1rem
+    +response(tab-port)
+        flex-basis: 45%
+        &:not(:last-child)
+            margin-right: initial
+        &:nth-child(1),
+        &:nth-child(2)
+            margin-bottom: 2rem
+    +response(phone)
+        &:not(:last-child)
+            margin-bottom: 2rem
+    &:hover
+        box-shadow: $boxShadowBig
+        transform: translateY(-1rem) scale(1.05)
+    &__wrapper
+        display: flex
+        justify-content: space-between
+        transform: skewY(7deg)
+        +response(tab-port)
+            flex-wrap: wrap
+        +response(phone)
+            flex-direction: column
+        &:hover .feature:not(:hover)
+            opacity: .3
